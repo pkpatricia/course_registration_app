@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Courses Registered In:</strong>
+  <%= @registration.course_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @registration.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_registration_path(@registration) %> |
+<%= link_to 'Back', tweets_path %>
