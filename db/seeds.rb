@@ -21,6 +21,11 @@ if Rails.env.development?
     Course.find_or_create_by name: "Underwater breathing", description: 'some description here', location: "Pacific Ocean", instructor: Instructor.last
 
   
-  students = ['stephaniethomas@example.com', 'brian.williams@example.com']
-  students.each {|email| User.create(email: email, password: email, password_confirmation: email) unless User.exists?(email: email) }
+  users = [['Stephanie Thomas', 'stephaniethomas@example.com'], 
+              ['Brian Williams', 'brian.williams@example.com']]
+  users.each do |user|
+    next if User.exists?(email: user[1])
+    User.create(name: user[0], email: user[1], 
+                password: user[1], password_confirmation: user[1])
+    end
 end

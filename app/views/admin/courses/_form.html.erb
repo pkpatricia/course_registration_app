@@ -1,0 +1,9 @@
+<div class="col-md-6 col-md-offset-3 space">
+<%= bootstrap_form_for [:admin, course] do |f| %>
+  <%= f.text_field :name %>
+  <%= f.collection_select :instructor_id, Instructor.all, :id, :name %>
+  <%= f.text_area :description %>
+  <%= f.text_field :location %>
+  <div class="text-center space-bottom"><%= f.submit class: 'btn btn-primary' %></div>
+<%- end %>
+</div>

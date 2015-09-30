@@ -14,19 +14,69 @@
  *= require_self
  */
  
- body {
+ body { 
+  background-image: url("/assets/background.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: 'Montserrat', sans-serif;
+  font-size: 22px !important;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: -10px !important;
+    border: 1px solid transparent;
+} 
+
+.space {
+  padding-top: 50px;
+}
+
+.space-bottom {
+  padding-bottom: 50px !important;
 }
 
 .container {
-  background: rgba(255,255,255,0.8);
+  background: rgb(255,255,255);
+  
+}
+
+.navbar-inverse {
+  padding: 40px;
 }
 
 .h1-icon {
-  width:  260px;
-  height: 260px;
+  width:  360px;
+  height: 360px;
+  position: relative;
 }
 
 .course-heading h1 {
   padding-top: 1.5em;
+}
+
+a.btn.btn-primary {
+  color: white !important;
+  margin: 0.5em;
+}
+
+a, a:visited, a:active, a:hover {
+    color: #337ab7 !important;
+    text-decoration: none;
+}
+
+
+.new-font {
+  font-family: 'Enriqueta', serif;
+}
+
+h1 {
+  font-size: 2.5em !important;
+}
+
+.navbar-brand {
+  font-size: 1.5em !important;
 }

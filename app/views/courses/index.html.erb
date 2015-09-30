@@ -1,14 +1,8 @@
-<div class="row">
-  <div class="col-md-3"><%= image_tag 'college.png', class: 'h1-icon' %></div>
+<div class="row space">
+  <div class="col-md-3 col-sm-12"><%= image_tag 'college.png', class: 'h1-icon' %></div>
   <div class="col-md-6 course-heading">
-    <h1 class="text-center">Welcome to TTS University</h1>
-    <h2 class="text-center">Available Courses</h2>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12">
-    <%= render partial: 'course', collection: @courses %>
+    <h1 class="text-center new-font"><strong>Welcome to TTS University</strong></h1>
+    
   </div>
 </div>
 
@@ -18,6 +12,8 @@
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
   </ol>
   
   
@@ -26,22 +22,54 @@
   <div class="carousel-inner center-block" role="listbox">
       
     <div class="item active">
-      <img src="/assets/college.jpg" height="1000" width="1500" alt="..." class="center-block">
+      <img src="/assets/college.jpg"  alt="..." class="img-responsive center-block">
       <div class="carousel-caption">
         The University
       </div>
     </div>
     <div class="item">
-      <img src="/assets/girls_learning.jpg" height="1000" width="1500" alt="..." class="center-block">
+      <img src="/assets/girls_learning.jpg" alt="..." class="img-responsive center-block">
       <div class="carousel-caption">
         The Students
       </div>
     </div>
     <div class="item">
-      <img src="/assets/students_in_sun.jpg" height="1000" width="1500" alt="..." class="center-block">
+      <img src="/assets/students_in_sun.jpg" alt="..." class="img-responsive center-block">
       <div class="carousel-caption">
         The Rewards
       </div>
     </div>
+    <div class="item">
+      <img src="/assets/girl_blackboard.jpg" alt="..." class="img-responsive center-block">
+      <div class="carousel-caption">
+        The Commitment
+      </div>
+    </div>
+    <div class="item">
+      <img src="/assets/students.jpg" alt="..." class="img-responsive center-block">
+      <div class="carousel-caption">
+        The Possibilities
+      </div>
+    </div>
+    
+    
+    
      </div>
   </div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="text-center space">Available Courses</h2>
+    <table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Instructor</th>
+  </tr>
+  <%= render partial: 'course', collection: @courses %>
+ 
+</table>
+    
+  </div>
+</div>
+

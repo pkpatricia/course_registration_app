@@ -1,5 +1,9 @@
 class EnrollmentsController < ApplicationController
   before_action :authenticate_user!
+  
+  def index
+    @enrollments = Enrollment.all
+  end
 
   def create
     redirect_to course and return if current_user.enrolled?(course)

@@ -3,15 +3,19 @@ Rails.application.routes.draw do
 
   
   devise_for :admins
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'user_registrations' }
   
   namespace :admin do
     resources :instructors
+    resources :courses
   end
   
   resources :courses do
     resources :enrollments
   end
+  
+  
+  resources :enrollments
   
   resources :instructors
   

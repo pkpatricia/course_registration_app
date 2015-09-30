@@ -2,7 +2,7 @@
   <div class="col-md-3"><%= image_tag 'college.png', class: 'h1-icon' %></div>
   <div class="col-md-6 course-heading">
     <h1 class="text-center new-font"><strong>Welcome to TTS University</strong></h1>
-    <h2 class="text-center space">Available Instructors</h2>
+    <h2 class="text-center space">Available Courses</h2>
   </div>
 </div>
 
@@ -11,10 +11,10 @@
 <table class="table table-striped">
   <tr>
     <th>Name</th>
-    <th>Courses</th>
+    <th>Instructor</th>
   </tr>
-  <%= render partial: 'row', collection: @instructors %>
+  <%= render partial: 'row', collection: @courses %>
  
 </table>
 
-<div class="text-center space-bottom"><%= link_to "Add New Instructor", new_admin_instructor_path, class: 'btn btn-primary' %></div>
+<div class="text-center"><%= link_to "Add new course", new_admin_course_path, class: 'btn btn-primary' %></div>
