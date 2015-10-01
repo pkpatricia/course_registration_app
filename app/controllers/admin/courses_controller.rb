@@ -1,4 +1,5 @@
 class Admin::CoursesController < Admin::ApplicationController
+  
   def index
     all_courses
   end

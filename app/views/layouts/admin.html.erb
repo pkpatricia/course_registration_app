@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -28,7 +28,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "courses", courses_path %></li>
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -38,7 +37,7 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
       
-          <%=render partial:"layouts/user_login_links" %>
+          <%=render partial:"layouts/admin_login_links" %>
     
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -47,7 +46,7 @@
 
 <div class="container">
   <%= render partial: "flash_messages", flash: flash %>
-  <%= yield %>
+<%= yield %>
 </div>
    
     

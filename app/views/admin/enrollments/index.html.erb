@@ -1,0 +1,33 @@
+<div class="row space">
+  <div class="col-md-3 col-sm-12"><%= image_tag 'college.png', class: 'h1-icon' %></div>
+  <div class="col-md-6 course-heading">
+    <h1 class="text-center new-font"><strong>Welcome to TTS University</strong></h1>
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="text-center space">Current Enrollments</h2>
+    <table class="table table-striped">
+  <tr>
+    <th>User</th>
+    <th>Course</th>
+  </tr>
+  
+  <tbody>
+    <% @enrollments.each do |enrollment| %>
+      <tr>
+        <td><%= enrollment.user.name %></td>
+        <td><%= enrollment.course.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+ 
+</table>
+    
+  </div>
+</div>
+
+
+

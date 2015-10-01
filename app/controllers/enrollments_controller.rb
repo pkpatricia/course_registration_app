@@ -1,9 +1,6 @@
 class EnrollmentsController < ApplicationController
   before_action :authenticate_user!
   
-  def index
-    @enrollments = Enrollment.all
-  end
 
   def create
     redirect_to course and return if current_user.enrolled?(course)
@@ -11,7 +8,7 @@ class EnrollmentsController < ApplicationController
     
     @enrollment.user = current_user
     if @enrollment.save
-      redirect_to course, notice: 'Enrollment was successfully created.'
+      redirect_to courses_path, notice: "You are now enrolled in the #{course.name} course."
     else
       render :new
     end
