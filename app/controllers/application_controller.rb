@@ -2,13 +2,19 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  before_action :devise_admin_layout
+  layout :layout_chooser
 
   protected
 
-  def devise_admin_layout
-    if devise_controller? && resource.class == Admin
-      layout "admin"
+  def layout_chooser
+    if is_admin_route?
+      "admin"
+    else
+      "application"
     end
+  end
+
+  def is_admin_route?
+    request.url =~ /admin/
   end
 end
