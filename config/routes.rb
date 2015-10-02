@@ -15,9 +15,10 @@ Rails.application.routes.draw do
   resources :courses do
     resources :enrollments
   end
-  
-  
-  resources :enrollments
+
+  # POST
+  # /courses/14/enrollments
+
   
   resources :instructors
   
